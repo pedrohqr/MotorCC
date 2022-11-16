@@ -84,7 +84,7 @@ disp('L = ', L);
 // Matrizes do sistema compensado
 Ac=[G.A+G.B*K -G.B*K; zeros(n, n) G.A+L*G.C];
 Bc=[B*K*M; zeros(n, 1)];
-Cc=[G.C];
+Cc=[G.C zeros(1, n)];
 
 // Preparando simulação para o Xcos
 // Carrega biblioteca de blocos e configuração de simulação
